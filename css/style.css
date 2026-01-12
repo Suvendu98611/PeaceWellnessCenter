@@ -1752,7 +1752,7 @@ header #navbar {
       flex-wrap: nowrap;
   text-align: center;
   background: transparent;
-  width:90%;
+  width:100%;
   position: relative;
 }
 
@@ -3258,5 +3258,76 @@ nav.navbar.navbar-default.navbar-sticky-in .logo-black {
   }
   .map-wrap iframe {
     width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ===== PREMIUM BRAND HEADER ===== */
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Smaller logo */
+.brand-wrap img {
+  width: 85px;
+  height: auto;
+}
+
+/* Text container */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+/* Top text: Peace Wellness */
+.brand-top {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #12b48b;
+  text-transform: uppercase;
+}
+
+/* Bottom text: Centre */
+.brand-bottom {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #204066;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2px;
+}
+
+/* Slight glow for premium feel */
+.brand-top {
+  text-shadow: 0 2px 10px rgba(18, 180, 139, 0.25);
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .brand-wrap img {
+    width: 45px;
+  }
+
+  .brand-top {
+    font-size: 18px;
+  }
+
+  .brand-bottom {
+    font-size: 13px;
+    letter-spacing: 2px;
   }
 }
