@@ -1,0 +1,314 @@
+/* =========================================
+   1. VARIABLES & GLOBAL STYLES
+   ========================================= */
+:root {
+    --primary-green: #12b48b;
+    --dark-green: #0d8a6b;
+    --dark-blue: #204066;
+    --text-dark: #2d3436;
+    --text-grey: #636e72;
+    --bg-light: #f9fdfc;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-grey);
+    background-color: var(--bg-light);
+}
+
+a { text-decoration: none; transition: 0.3s; }
+ul { list-style: none; padding: 0; margin: 0; }
+
+/* Section Title Styling */
+.sc-title-two {
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.sc-title-two h4 {
+    color: var(--primary-green);
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.sc-title-two h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.3;
+}
+
+.sc-title-two p {
+    max-width: 600px;
+    margin: 15px auto 0;
+}
+
+/* Text Gradients */
+.text-gradient {
+    background: linear-gradient(45deg, var(--primary-green), var(--dark-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* =========================================
+   2. SECTION: WELLNESS PILLARS (Standard Cards)
+   ========================================= */
+.wellness-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-bottom: 4px solid transparent;
+    height: 100%;
+}
+
+.wellness-card:hover {
+    transform: translateY(-10px);
+    border-bottom: 4px solid var(--primary-green);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.wellness-icon {
+    font-size: 45px;
+    color: var(--primary-green);
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.wellness-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.read-more {
+    color: var(--primary-green);
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.read-more:hover {
+    color: var(--dark-green);
+    gap: 10px;
+}
+
+/* =========================================
+   3. SECTION: WORKING PROCESS (Blue Area)
+   ========================================= */
+.solution {
+    background-color: var(--dark-blue);
+    padding: 80px 0;
+    color: var(--white);
+}
+
+.solution .sc-title-two h4, 
+.solution .sc-title-two h2,
+.solution p {
+    color: var(--white);
+}
+
+.step-item {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+.step-number {
+    font-size: 60px;
+    font-weight: 800;
+    opacity: 0.1;
+    color: var(--primary-green);
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.step-item i {
+    color: var(--primary-green);
+    position: relative;
+    z-index: 1;
+}
+
+.step-item h4 {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* =========================================
+   4. SECTION: EXPERT CARE (Premium Design)
+   ========================================= */
+.premium-clinics {
+    background: linear-gradient(180deg, #f9fdfc 0%, #ffffff 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Decoration */
+.bg-circle-top {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(18, 180, 139, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.clinic-premium-card {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 45px 35px;
+    border: 1px solid rgba(0,0,0,0.04);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    z-index: 1;
+}
+
+.clinic-premium-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(18, 180, 139, 0.15);
+    border-color: rgba(18, 180, 139, 0.3);
+}
+
+/* Badge */
+.card-badge {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: rgba(18, 180, 139, 0.1);
+    color: var(--primary-green);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Floating Icon Box */
+.clinic-icon-box {
+    width: 70px;
+    height: 70px;
+    background: #f0fdfa;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    transition: 0.3s ease;
+}
+
+.clinic-premium-card:hover .clinic-icon-box {
+    background: var(--primary-green);
+}
+
+.clinic-icon-box i {
+    font-size: 32px;
+    color: var(--primary-green);
+    transition: 0.3s ease;
+}
+
+.clinic-premium-card:hover .clinic-icon-box i {
+    color: var(--white);
+}
+
+/* Content */
+.clinic-card-body h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin-bottom: 15px;
+}
+
+.clinic-card-body p {
+    color: var(--text-grey);
+    line-height: 1.7;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+/* Features List */
+.clinic-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.clinic-tags span {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #f7f7f7;
+    padding: 5px 12px;
+    border-radius: 8px;
+}
+
+.clinic-tags span i {
+    color: var(--primary-green);
+    font-size: 14px;
+}
+
+/* Button */
+.clinic-btn {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-green);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.clinic-btn:hover {
+    color: var(--dark-green);
+    gap: 12px;
+}
+
+/* =========================================
+   5. RESPONSIVE ADJUSTMENTS
+   ========================================= */
+@media (max-width: 991px) {
+    .sc-title-two h2 { font-size: 30px; }
+}
+
+@media (max-width: 767px) {
+    .sc-title-two h2 { font-size: 24px; }
+    
+    .clinic-premium-card {
+        padding: 30px 20px;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .clinic-tags { justify-content: center; }
+    
+    .bg-circle-top { display: none; }
+}
